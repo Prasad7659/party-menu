@@ -62,6 +62,23 @@ party-menu/
   "description": "Chicken cooked with onions, tomatoes, and Indian spices for a classic curry."
 }
 
+```
+
+## Ingredients data set
+
+export const INGREDIENTS = {
+  1: [
+    { name: "Paneer", qty: "200g" },
+    { name: "Onion", qty: "1 medium" },
+    { name: "Capsicum", qty: "1" },
+  ],
+  6: [
+    { name: "Chicken", qty: "500g" },
+    { name: "Tomato", qty: "2 medium" },
+    { name: "Onion", qty: "2 large" },
+    { name: "Spices", qty: "to taste" },
+  ],
+};
 
 🚀 Getting Started
 1. Clone the repository
@@ -88,9 +105,6 @@ Deployed using GitHub Pages.
 
 HashRouter is used to ensure routing works correctly on static hosting.
 
-📸 Screenshots
-
-👉 (Add screenshots here once UI is ready – like Veg/Non-Veg toggle, dish list, ingredients page, etc.)
 
 🛠️ Tech Stack
 
