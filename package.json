@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://Prasad7659.github.io/party-menu",
+  "homepage": "https://prasad7659.github.io/party-menu/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
