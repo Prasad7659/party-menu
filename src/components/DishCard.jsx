@@ -4,8 +4,9 @@ export default function DishCard({ dish, isSelected, onToggle, onIngredient }) {
   return (
     <div className={`p-4 rounded-lg border shadow-sm bg-white ${isSelected ? "ring-2 ring-blue-400" : ""}`}>
       <div className="h-32 bg-gray-100 flex items-center justify-center rounded mb-3">
-        {dish.image ? (
-          <img src={dish.image} alt={dish.name} className="object-cover h-full w-full rounded" />
+        {dish.category.image ? (
+      
+          <img src={dish.category.image} alt={dish.name} className="object-cover h-full w-full rounded" />
         ) : (
           <span className="text-gray-400">No Image</span>
         )}
@@ -18,13 +19,13 @@ export default function DishCard({ dish, isSelected, onToggle, onIngredient }) {
       <div className="flex gap-2">
         <button
           onClick={onToggle}
-          className="px-3 py-1 rounded bg-blue-600 text-white text-sm"
+          className="px-3 py-1 rounded bg-orange-600 text-white text-sm"
         >
           {isSelected ? "Remove" : "Add"}
         </button>
         <button
           onClick={onIngredient}
-          className="text-blue-600 underline text-sm"
+          className="text-orange-600 underline text-sm"
         >
           Ingredient
         </button>

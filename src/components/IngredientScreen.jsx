@@ -14,8 +14,8 @@ export default function IngredientScreen() {
 
   return (
     <div className="max-w-2xl mx-auto p-6">
-      <button onClick={() => navigate(-1)} className="text-blue-600 underline mb-3">
-        Back
+      <button onClick={() => navigate(-1)} className="text-orange-600 underline mb-3">
+        ⮜ Back
       </button>
       <h2 className="text-xl font-bold mb-2">{dish.name}</h2>
       <p className="text-gray-600 mb-4">{dish.description}</p>

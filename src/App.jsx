@@ -54,7 +54,7 @@ export default function App() {
                     key={tab}
                     className={`px-3 py-1 rounded-lg border ${
                       activeTab === tab
-                        ? "bg-blue-600 text-white"
+                        ? "bg-orange-600 text-white"
                         : "bg-white border-gray-300"
                     }`}
                     onClick={() => { setActiveTab(tab); setQuery(""); }}
@@ -72,14 +72,57 @@ export default function App() {
                   value={query}
                   onChange={e => setQuery(e.target.value)}
                 />
-                <label className="flex items-center gap-1 text-sm">
-                  <input type="checkbox" checked={vegFilter} onChange={() => setVegFilter(v => !v)} />
-                  Veg
-                </label>
-                <label className="flex items-center gap-1 text-sm">
-                  <input type="checkbox" checked={nonVegFilter} onChange={() => setNonVegFilter(v => !v)} />
-                  Non-Veg
-                </label>
+               {/* Veg Toggle */}
+<label className="flex items-center gap-2 text-sm cursor-pointer">
+  <div
+    onClick={() => setVegFilter(v => !v)}
+    className="relative w-12 h-6 flex items-center rounded-full cursor-pointer border border-green-600 transition-colors"
+    style={{ backgroundColor: vegFilter ? "#16a34a22" : "transparent" }}
+  >
+    <div
+      className={`absolute left-1 flex items-center justify-center w-4 h-4 rounded-sm border-2 border-green-600 bg-white transition-transform ${
+        vegFilter ? "translate-x-6" : ""
+      }`}
+    >
+      {/* Circle inside square */}
+      <div
+        className={`w-2 h-2 rounded-full border border-green-600 ${
+          vegFilter ? "bg-green-600" : "bg-green-600"
+        }`}
+      ></div>
+    </div>
+  </div>
+  Veg
+</label>
+
+{/* Non-Veg Toggle */}
+<label className="flex items-center gap-2 text-sm cursor-pointer">
+  <div
+    onClick={() => setNonVegFilter(v => !v)}
+    className="relative w-12 h-6 flex items-center rounded-full cursor-pointer border border-red-600 transition-colors"
+    style={{ backgroundColor: nonVegFilter ? "#dc262622" : "transparent" }}
+  >
+    <div
+      className={`absolute left-1 flex items-center justify-center w-4 h-4 rounded-sm border-2 border-red-600 bg-white transition-transform ${
+        nonVegFilter ? "translate-x-6" : ""
+      }`}
+    >
+      {/* Arrow inside square */}
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 17"
+        className="w-3 h-3"
+        fill={nonVegFilter ? "red" : "red"}
+        stroke="red"
+        strokeWidth="2"
+      >
+        <path d="M12 4l6 10H6z" /> {/* Upward arrow */}
+      </svg>
+    </div>
+  </div>
+  Non-Veg
+</label>
+
               </div>
 
               {/* Dish List */}
