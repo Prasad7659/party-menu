@@ -66,6 +66,7 @@ party-menu/
 
 ## Ingredients data set
 
+```javascript
 export const INGREDIENTS = {
   1: [
     { name: "Paneer", qty: "200g" },
@@ -79,6 +80,7 @@ export const INGREDIENTS = {
     { name: "Spices", qty: "to taste" },
   ],
 };
+```
 
 🚀 Getting Started
 1. Clone the repository
